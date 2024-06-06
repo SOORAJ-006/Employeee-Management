@@ -1,0 +1,244 @@
+<div class="card overflow-auto card-scroll-card card-employee-edit" id="empEdit">
+    <div class="card-body d-flex flex-column ">
+        <header>
+            <h2 class="card-heading pb-3 txt-color">Edit Employee</h2>
+        </header>
+
+        <div class="card-bd">
+            <div class="d-flex gap-3 align-items-center">
+                <input type="file" class="file-upload" id="imge-upload" onchange="avatarPreview()">
+                <label for="imge-upload"
+                    class="upload upload-image d-flex justify-content-center flex-column align-items-center mb-3">
+                    <img id="image-box" class="image-box" src="" alt="">
+                </label>
+                <label for="imge-upload" class="btn btn-lg bg-light btn-cancel ms-1 btn-none p-3">
+                    change
+                </label>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+                    <label class="form-label txt-color star mb-3">Salutaton </label>
+                    <select id="editSalutation" class="form-select form-select-lg  text-secondary txt-in"
+                        aria-label="Large select example">
+                        <!-- <option selected class="">select</option> -->
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+
+                    </select>
+                    <label class="error" id="editSalutationError"></label>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+                    <label class="form-label txt-color star ">First Name </label>
+                    <div class="input-group ">
+                        <input id="editFirstName" type="text" class="form-control txt-in" placeholder="john"
+                            aria-label="john" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="editFirstNameError"></label>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+                    <label class="form-label txt-color star ">Last Name </label>
+                    <div class="input-group ">
+                        <input id="editLastName" type="text" class="form-control txt-in" placeholder="doe"
+                            aria-label="doe" aria-describedby="basic-addon2">
+                    </div>
+                    <label class="error" id="editLastNameError"></label>
+
+                </div>
+            </div>
+
+            <!-- second -->
+
+            <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label class="form-label txt-color star ">Email Address </label>
+                    <div class="input-group ">
+                        <input id="editEmail" type="text" class="form-control txt-in"
+                            placeholder="mail@simmple.com" aria-label="john"
+                            aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="editEmailError"></label>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label class="form-label txt-color star">Mobile Number </label>
+                    <div class="input-group ">
+                        <input id="editPhone" type="text" class="form-control txt-in"
+                            placeholder="enter your mobile number" aria-label="doe"
+                            aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="editPhoneError"></label>
+
+                </div>
+            </div>
+
+            <!-- username and password  -->
+
+            <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star ">Username</label>
+                    <div class="input-group ">
+                        <input id="editUserName" type="txt" required class="form-control txt-in"
+                            placeholder="enter Username" aria-label="john" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="editUserNameError"></label>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star">Password </label>
+                    <div class="input-group ">
+                        <input id="editPassword" type="password" required class="form-control txt-in"
+                            placeholder="enter your password" aria-label="doe"
+                            aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="editPasswordError"></label>
+
+                </div>
+            </div>
+
+            <!-- third -->
+
+            <div class="row ">
+                <div class="col-lg-6 col-md-12 col-sm-6 mb-3">
+                    <label class="form-label txt-color star">Date of Birth </label>
+                    <div class="input-group ">
+                        <input id="editDob" type="date" class="form-control txt-in">
+
+                    </div>
+                    <label class="error" id="editDobError"></label>
+
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-6 mb-3">
+                    <label class="form-label txt-color star">Gender </label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="editGender" value="male"
+                                id="editMale">
+                            <label class="form-check-label  txt-color txt-400">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="editGender" value="female"
+                                id="editFemale">
+                            <label class="form-check-label  txt-color txt-400">Female</label>
+                        </div>
+                    </div>
+                    <label class="error" id="editGenderError"></label>
+
+                </div>
+            </div>
+
+            <!-- four -->
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <label class="form-label txt-color star">Address </label>
+                    <div class="input-group ">
+                        <input id="editAddress" type="text" class="form-control txt-in"
+                            placeholder="enter address" aria-label="john" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="editAddressError"></label>
+
+                </div>
+            </div>
+
+            <!-- qualification -->
+
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <label for="" class="form-label txt-color star">Qualification </label>
+                    <div class="input-group ">
+                        <input id="editQualification" type="text" required class="form-control txt-in"
+                            placeholder="enter address" aria-label="john" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="editQualificationError"></label>
+
+                </div>
+            </div>
+
+            <!-- five -->
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label class="form-label txt-color star">Country </label>
+                    <select id="editCountry" class="form-select form-select-lg  text-secondary txt-in"
+                        aria-label="Large select example">
+                        <!-- <option selected class="">select</option> -->
+                        <option value="USA">USA</option>
+                        <option value="India">India</option>
+                        <option value="UAE">UAE</option>
+                    </select>
+                    <label class="error" id="editCountryError"></label>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label class="form-label txt-color star">State </label>
+                    <select id="editState" class="form-select form-select-lg  text-secondary txt-in"
+                        aria-label="Large select example">
+                        <!-- <option selected class="">select</option> -->
+                        <option value="Kerala">Kerala</option>
+                        <option value="LA">LA</option>
+                        <option value="Dubai">Dubai</option>
+                    </select>
+                    <label class="error" id="editStateError"></label>
+
+                </div>
+            </div>
+
+            <!-- six -->
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label class="form-label txt-color star">City </label>
+                    <div class="input-group ">
+                        <input id="editCity" type="text" class="form-control txt-in"
+                            placeholder="enter city" aria-label="john" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="editCityError"></label>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label class="form-label txt-color star">Pin/Zip </label>
+                    <div class="input-group">
+                        <input id="editPin" type="text" class="form-control txt-in"
+                            placeholder="enter pin/zip" aria-label="doe" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="editPinError"></label>
+
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <div class="row">
+                        <div class="button ">
+                            <button onclick="Close('empEdit')"
+                                class="btn btn-lg bg-light  ms-1 btn-none p-3">Cancel</button>
+                            <button class="btn btn-lg  bg-color btn-fill text-white ms-1 p-3"
+                                id="saveEdit">save
+                                changes</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- close btn -->
+
+        <div class="button ">
+            <button class="btn btn-lg bg-light btn-close ms-1 btn-none p-3" id="btnClose"
+                onclick="Close('empEdit')"></button>
+        </div>
+    </div>
+
+</div>

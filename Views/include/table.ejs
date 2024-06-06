@@ -1,0 +1,71 @@
+<div class="section-body d-flex flex-column  mb-3">
+    <div class="card mb-3 tableCard">
+        <div class="card-body">
+            <div class="header-card d-flex justify-content-between">
+                <div class="card-header-heading d-flex align-items-center gap-2 p-2">
+                    <h3 class="mb-0">Employee List</h3>
+
+                    <select class="form-select " aria-label="Default select example" id="count">
+
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option selected value="5">5</option>
+                        <option  id="totalEmployee"  value="max">*</option>
+                    </select>
+
+                    <p class="mb-0">of <span id="totalContnets">5</span></p>
+                </div>
+                <div class="card-header-btn d-flex align-items-center">
+                    <button type="button" class="header-btn btn btn-primary p-3"
+                        onclick="display('addEmployee')">Add
+                        Employee</button>
+                </div>
+            </div>
+
+            <div class="body-card">
+                <form action="">
+
+
+                    <table id="" class="table">
+                        <thead class="table-head">
+                            <tr>
+                                <th scope="col">Sl.No <i class="fa-solid fa-chevron-down"></i></th>
+                                <th scope="col">Name <i class="fa-solid fa-chevron-down"></i></th>
+                                <th scope="col">Email <i class="fa-solid fa-chevron-down"></i></th>
+                                <th scope="col">Phone <i class="fa-solid fa-chevron-down"></i></th>
+                                <th scope="col">Gender <i class="fa-solid fa-chevron-down"></i></th>
+                                <th scope="col">DOB <i class="fa-solid fa-chevron-down"></i></th>
+                                <th scope="col">Country <i class="fa-solid fa-chevron-down"></i>
+                                </th>
+                                <th scope="col"></th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+
+
+                            <!-- table body -->
+
+                        </tbody>
+                    </table>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- pagination -->
+
+    <nav aria-label="Page navigation example d-flex ">
+        <ul class="pagination justify-content-end" id="paginationContaioner">
+
+
+
+        </ul>
+    </nav>
+
+
+</div>

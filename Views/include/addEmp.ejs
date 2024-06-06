@@ -1,0 +1,231 @@
+<div class="card overflow-auto card-scroll-card p-3" id="addEmployee">
+    <div class="card-body  d-flex flex-column">
+        <header>
+            <h2 class="card-heading pb-3 txt-color">Add Employee</h2>
+        </header>
+
+        <div class="card-bd ">
+            <input type="file" class="file-upload" id="img-upload" onchange="AddImgPreview()">
+            <label for="img-upload" 
+                    class=" upload d-flex justify-content-center flex-column align-items-center mb-3">
+                <i class="bi bi-upload"></i>
+                <div class="d-flex flex-column align-items-center header">
+                    <h5>Upload Image</h5>
+                    <h6 class="upload-h6">PNG, JPG files are allowed</h6>
+                </div>
+                <img src="" id="addEmpImg">
+            </label>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+                    <label for="" class="form-label txt-color star mb-3">Salutaton </label>
+                    <select id="addSalutation" class="form-select form-select-lg  text-secondary txt-in"
+                        aria-label="Large select example" required>
+                        <option selected class="">select</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                    </select>
+                    <label class="error" id="addSalutationError"></label>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+                    <label for="" class="form-label txt-color star ">First Name </label>
+                    <div class="input-group ">
+                        <input id="addFirstName" type="text" required class="form-control txt-in"
+                            placeholder="john" aria-label="john" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="addFirstNameError"></label>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+                    <label for="" class="form-label txt-color star ">Last Name </label>
+                    <div class="input-group ">
+                        <input id="addLastName" type="text" required class="form-control txt-in"
+                            placeholder="doe" aria-label="doe" aria-describedby="basic-addon2">
+                    </div>
+                    <label class="error" id="addLastNameError"></label>
+
+                </div>
+            </div>
+
+            <!-- second -->
+
+            <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star ">Email Address </label>
+                    <div class="input-group ">
+                        <input id="addEmail" type="email" required class="form-control txt-in"
+                            placeholder="mail@simmple.com" aria-label="john"
+                            aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="addEmailError"></label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star">Mobile Number </label>
+                    <div class="input-group ">
+                        <input id="addPhone" type="text" required class="form-control txt-in"
+                            placeholder="enter your mobile number" aria-label="doe"
+                            aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="addPhoneError"></label>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star ">Username</label>
+                    <div class="input-group ">
+                        <input id="adduserName" type="txt" required class="form-control txt-in"
+                            placeholder="enter Username" aria-label="john" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="adduserNameError"></label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star">Password </label>
+                    <div class="input-group ">
+                        <input id="addPassword" type="password" required class="form-control txt-in"
+                            placeholder="enter your password" aria-label="doe"
+                            aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="addPasswordError"></label>
+                </div>
+            </div>
+
+
+
+            <!-- third -->
+
+            <div class="row ">
+                <div class="col-lg-6 col-md-12 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star">Date of Birth </label>
+                    <div class="input-group ">
+                        <input id="addDob" type="date" required class="form-control txt-in">
+
+                    </div>
+                    <label class="error" id="addDobError"></label>
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star">Gender </label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input gender" name="gender" type="radio" id="forMale"
+                                value="male">
+                            <label class="form-check-label  txt-color txt-400"
+                                for="inlineRadio1">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input gender" name="gender" type="radio" id="forFemale"
+                                value="female">
+                            <label class="form-check-label  txt-color txt-400"
+                                for="inlineRadio2">Female</label>
+                        </div>
+                    </div>
+                    <label class="error" id="errorGender"></label>
+                </div>
+            </div>
+
+            <!-- four -->
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <label for="" class="form-label txt-color star">Address </label>
+                    <div class="input-group ">
+                        <input id="addAddress" type="text" required class="form-control txt-in"
+                            placeholder="enter address" aria-label="john" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="addAddressError"></label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <label for="" class="form-label txt-color star">Qualification </label>
+                    <div class="input-group ">
+                        <input id="addqualification" type="text" required class="form-control txt-in"
+                            placeholder="enter address" aria-label="john" aria-describedby="basic-addon2">
+
+                    </div>
+                    <label class="error" id="addqualificationError"></label>
+                </div>
+            </div>
+
+            <!-- five -->
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star">Country </label>
+                    <select id="addCountry" class="form-select form-select-lg  text-secondary txt-in"
+                        aria-label="Large select example" required>
+                        <option selected class="">select</option>
+                        <option value="USA">Usa</option>
+                        <option value="India">India</option>
+                        <option value="UAE">UAE</option>
+                    </select>
+                    <label class="error" id="addCountryError"></label>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star">State </label>
+                    <select id="addState" name="state"
+                        class="form-select form-select-lg  text-secondary txt-in"
+                        aria-label="Large select example" required>
+                        <option selected class="">select</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="LA">LA</option>
+                        <option value="Dubai">Dubai</option>
+                    </select>
+                    <label class="error" id="addStateError"></label>
+                </div>
+            </div>
+
+            <!-- six -->
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star">City </label>
+                    <div class="input-group ">
+                        <input id="addCity" type="text" required class="form-control txt-in"
+                            placeholder="enter city" aria-label="john" aria-describedby="basic-addon2">
+                    </div>
+                    <label class="error" id="addCityError"></label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+                    <label for="" class="form-label txt-color star">Pin/Zip </label>
+                    <div class="input-group">
+                        <input type="text" id="addPin" required class="form-control txt-in"
+                            placeholder="enter pin/zip" aria-label="doe" aria-describedby="basic-addon2">
+                    </div>
+                    <label class="error" id="addPinError"></label>
+                </div>
+                <!-- button -->
+                <div class="d-flex justify-content-end">
+                    <div class="row">
+                        <div class="button ">
+                            <button class="btn btn-lg bg-light  ms-1 btn-none p-3"
+                                onclick="Close('addEmployee')">Cancel</button>
+
+                            <button class="btn btn-lg  bg-color btn-fill text-white ms-1 p-3"
+                                id="addEmployeeBtn">
+                                Add Employee</button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- close btn -->
+
+        <div class="button" id="btnClose">
+            <button class="btn btn-lg bg-light btn-close ms-1 btn-none p-3"
+                onclick="Close('addEmployee')"></button>
+        </div>
+    </div>
+
+</div>
